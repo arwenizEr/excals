@@ -44,6 +44,11 @@
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
       });
+
+      socket.on('time', function(timeString) {
+        el = document.getElementById('server-time')
+        el.innerHTML = 'Server time: ' + timeString;
+      });
     </script>
   </body>
 </html>
