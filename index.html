@@ -14,9 +14,11 @@
       #messages { list-style-type: none; margin: 0; padding: 0; }
       #messages > li { padding: 0.5rem 1rem; }
       #messages > li:nth-child(odd) { background: #efefef; }
+      #server-time { float:left;}
     </style>
   </head>
   <body>
+    <div id="server-time"></div>
     <ul id="messages"></ul>
     <form id="form" action="">
       <input id="input" autocomplete="off" /><button>Send</button>
@@ -45,10 +47,10 @@
         window.scrollTo(0, document.body.scrollHeight);
       });
 
-      socket.on('time', function(timeString) {
+      /*socket.on('time', function(timeString) {
         el = document.getElementById('server-time')
         el.innerHTML = 'Server time: ' + timeString;
-      });
+      });*/
     </script>
   </body>
 </html>
