@@ -15,6 +15,6 @@ io.on('connection', (socket) => {
   });
 });
 
-http.listen(port, host, () => {
-  console.log(`Socket.IO server running at http://${host}:${port}/`);
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
